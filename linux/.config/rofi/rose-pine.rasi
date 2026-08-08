@@ -1,0 +1,16 @@
+/**
+ *
+ * Rosé Pine Moon
+ * Uses the same semantic color choices as the Waybar theme.
+ **/
+
+* {
+    background:     #2A273FE6;
+    background-alt: #2A283EE6;
+    input:          #393552E6;
+    border:         #C4A7E7FF;
+    foreground:     #E0DEF4FF;
+    selected:       #C4A7E7FF;
+    active:         #9CCFD8FF;
+    urgent:         #EB6F92FF;
+}

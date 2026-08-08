@@ -1,0 +1,8 @@
+require("plugins.interface")
+require("plugins.aerial")
+require("plugins.telescope")
+require("plugins.completion")
+require("plugins.lsp")
+require("plugins.lint")
+require("plugins.format")
+require("plugins.treesitter")

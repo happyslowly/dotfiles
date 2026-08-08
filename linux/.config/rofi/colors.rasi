@@ -1,0 +1,14 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ *
+ * Active color scheme: Rosé Pine Moon
+ *
+ **/
+
+/* Import color-scheme from `colors` directory */
+
+@import "rose-pine.rasi"

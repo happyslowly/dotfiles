@@ -1,0 +1,210 @@
+:root {
+  --cc-bg: rgba(35, 33, 54, 0.96);
+  --noti-border-color: #c4a7e7;
+  --noti-bg: 42, 39, 63;
+  --noti-bg-alpha: 0.96;
+  --noti-bg-darker: #232136;
+  --noti-bg-hover: #393552;
+  --noti-bg-focus: rgba(68, 65, 90, 0.8);
+  --noti-close-bg: #393552;
+  --noti-close-bg-hover: #56526e;
+  --text-color: #e0def4;
+  --text-color-disabled: #6e6a86;
+  --bg-selected: #c4a7e7;
+  --notification-icon-size: 56px;
+  --notification-app-icon-size: 20px;
+  --notification-group-icon-size: 28px;
+  --border: 2px solid var(--noti-border-color);
+  --border-radius: 12px;
+  --notification-shadow: 0 4px 12px rgba(35, 33, 54, 0.55);
+  --font-size-body: 13px;
+  --font-size-summary: 14px;
+}
+
+* {
+  font-family: "Iosevka Nerd Font Propo", monospace;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+notificationwindow,
+blankwindow {
+  background: transparent;
+}
+
+.notification-row {
+  background: transparent;
+  outline: none;
+}
+
+.notification-row .notification-background {
+  padding: 3px 10px;
+}
+
+.notification-row .notification-background .notification {
+  padding: 0;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background: rgba(var(--noti-bg), var(--noti-bg-alpha));
+  box-shadow: var(--notification-shadow);
+}
+
+.notification-row .notification-background .notification.critical {
+  border-color: #eb6f92;
+}
+
+.notification-row .notification-background .notification .notification-default-action {
+  margin: 0;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover {
+  background: var(--noti-bg-hover);
+}
+
+.notification-content .summary {
+  color: #c4a7e7;
+  font-size: var(--font-size-summary);
+  font-weight: 700;
+}
+
+.notification-content .body {
+  color: var(--text-color);
+  font-size: var(--font-size-body);
+}
+
+.notification-content .time {
+  margin-right: 28px;
+  color: #908caa;
+  font-size: 12px;
+}
+
+.notification-content .image,
+.notification-content .body-image {
+  border-radius: 9px;
+}
+
+.close-button {
+  min-width: 24px;
+  min-height: 24px;
+  margin-top: 8px;
+  margin-right: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  color: #e0def4;
+  background: var(--noti-close-bg);
+  box-shadow: none;
+}
+
+.close-button:hover {
+  color: #232136;
+  background: #eb6f92;
+}
+
+.notification-action > button,
+.inline-reply-button {
+  margin: 4px;
+  padding: 6px;
+  border: 1px solid #56526e;
+  border-radius: 9px;
+  color: #e0def4;
+  background: #393552;
+  box-shadow: none;
+}
+
+.notification-action > button:hover,
+.inline-reply-button:hover {
+  color: #232136;
+  background: #9ccfd8;
+}
+
+.inline-reply-entry {
+  border: 1px solid #56526e;
+  border-radius: 9px;
+  color: #e0def4;
+  background: #232136;
+}
+
+.control-center {
+  padding: 10px;
+  border: 2px solid #c4a7e7;
+  border-radius: 12px;
+  color: #e0def4;
+  background: var(--cc-bg);
+  box-shadow: 0 4px 16px rgba(35, 33, 54, 0.65);
+}
+
+.control-center .notification-row .notification-background {
+  padding: 4px 0;
+}
+
+.control-center-list-placeholder {
+  color: #6e6a86;
+}
+
+.widget-title {
+  margin: 4px 6px 10px;
+}
+
+.widget-title > label {
+  color: #f6c177;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.widget-title > button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 9px;
+  color: #e0def4;
+  background: #393552;
+  box-shadow: none;
+}
+
+.widget-title > button:hover {
+  color: #232136;
+  background: #eb6f92;
+}
+
+.widget-dnd {
+  margin: 0 6px 10px;
+  padding: 8px 10px;
+  border-radius: 9px;
+  background: #2a273f;
+}
+
+.widget-dnd > label {
+  color: #9ccfd8;
+}
+
+.widget-dnd > switch {
+  border-radius: 999px;
+  background: #393552;
+}
+
+.widget-dnd > switch:checked {
+  background: #c4a7e7;
+}
+
+.widget-dnd > switch slider {
+  border-radius: 999px;
+  background: #e0def4;
+}
+
+.notification-group {
+  background: transparent;
+}
+
+.notification-group .notification-group-headers {
+  margin: 6px 10px;
+  color: #908caa;
+}
+
+.notification-group.collapsed.not-expanded {
+  opacity: 0.55;
+}
