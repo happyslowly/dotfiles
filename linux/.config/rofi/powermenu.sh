@@ -5,7 +5,20 @@ set -u
 dir="$HOME/.config/rofi"
 theme="$dir/powermenu.rasi"
 host="$(hostname)"
-uptime_text="$(uptime -p | sed 's/^up //')"
+
+format_uptime() {
+  read -r secs _ </proc/uptime
+  secs=${secs%.*}
+  local days=$((secs / 86400)) hours=$(((secs % 86400) / 3600)) mins=$(((secs % 3600) / 60))
+  local parts=()
+  ((days > 0)) && parts+=("$days day$(((days != 1)) && printf s)")
+  ((hours > 0)) && parts+=("$hours hour$(((hours != 1)) && printf s)")
+  parts+=("$mins minute$(((mins != 1)) && printf s)")
+  local out
+  printf -v out '%s, ' "${parts[@]}"
+  echo "${out%, }"
+}
+uptime_text="$(format_uptime)"
 
 shutdown=' Power Off'
 reboot=' Reboot'
