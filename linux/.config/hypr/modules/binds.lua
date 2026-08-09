@@ -17,6 +17,7 @@ local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 closeWindowBind:set_enabled(true)
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 1 }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + N", hl.dsp.layout("togglesplit")) -- dwindle only
