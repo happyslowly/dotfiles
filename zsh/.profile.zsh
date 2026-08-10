@@ -13,3 +13,5 @@ alias grep='grep --color=auto'
 alias vi='nvim'
 alias vid='neovide'
 alias history='history 1'
+
+command -v nix-your-shell >/dev/null && source <(nix-your-shell zsh)
